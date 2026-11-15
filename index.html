@@ -77,91 +77,67 @@
 
   <!-- Main Content -->
   <main id="main-content">
-    <!-- Hero Section: TV Commercial Cinema Showcase -->
-    <section class="hero-commercial-section">
-      <div class="container">
-        <div class="hero-commercial-grid">
-          <div class="hero-copy-wrap">
-            <div class="overline-badge">
-              <span>✦</span> The Elevation Series <span>✦</span>
-            </div>
-            <h1 class="hero-headline">
-              The Elevation of <br><span class="gold-gradient-text">Magnetic Attraction.</span>
-            </h1>
-            <p class="hero-subtext">
-              Crafted for commanding sillage and unforgettable presence. Experience our curated five-part fragrance anthology, formulated in concentrated extract oils with transparent Pakistani Rupee pricing.
-            </p>
-            <div class="hero-button-row">
-              <a href="./collection.html" class="btn btn-primary">Shop Collection &amp; Prices</a>
-              <a href="./about.html" class="btn btn-outline">Our Philosophy</a>
-            </div>
+    <!-- Hero Section: Full-Bleed Background Slideshow & Cinema Ambient Video -->
+    <section class="hero-fullscreen-section" aria-label="AROMA HOUSE Hero Showcase">
+      <!-- Full-bleed Background Media Container (Spans Entire Hero Section) -->
+      <div class="hero-backdrop-container">
+        <!-- Crystal-Clear Fullscreen Slides for Each Elevation Fragrance -->
+        <img src="./assets/hero-slide-1.jpg" alt="White Oud Elevation - AROMA HOUSE" class="hero-bg-slide active" data-slide="0">
+        <img src="./assets/hero-slide-2.jpg" alt="Oud Supreme Elevation - AROMA HOUSE" class="hero-bg-slide" data-slide="1">
+        <img src="./assets/hero-slide-3.jpg" alt="Ghilaf-e-Kaba Elevation - AROMA HOUSE" class="hero-bg-slide" data-slide="2">
+        <img src="./assets/hero-slide-4.jpg" alt="Oud Ispahan Elevation - AROMA HOUSE" class="hero-bg-slide" data-slide="3">
+        <img src="./assets/hero-slide-5.jpg" alt="Silver Oud Elevation V-2025 - AROMA HOUSE" class="hero-bg-slide" data-slide="4">
+
+        <!-- Ambient Video Shimmer Layer -->
+        <video class="hero-fullscreen-video" autoplay loop muted playsinline poster="./assets/hero-slide-1.jpg" aria-hidden="true">
+          <source src="./assets/hero-fullscreen-ambient.mp4" type="video/mp4">
+        </video>
+
+        <!-- Studio Vignette Gradient Overlay -->
+        <div class="hero-backdrop-overlay" aria-hidden="true"></div>
+      </div>
+
+      <!-- Foreground Content Layer -->
+      <div class="container hero-foreground-content">
+        <div class="hero-content-box">
+          <div class="overline-badge">
+            <span>✦</span> The Elevation Series <span>✦</span> Haute Parfumerie
           </div>
+          <h1 class="hero-headline">
+            The Elevation of <br><span class="gold-gradient-text">Magnetic Attraction.</span>
+          </h1>
+          <p class="hero-subtext">
+            Crafted for commanding sillage and unforgettable presence. Experience our curated five-part fragrance anthology, formulated in concentrated extract oils with transparent Pakistani Rupee pricing.
+          </p>
+          <div class="hero-button-row">
+            <a href="./collection.html" class="btn btn-primary">Shop Collection &amp; Prices</a>
+            <a href="./about.html" class="btn btn-outline">Our Philosophy</a>
+          </div>
+        </div>
 
-          <!-- Cinema Commercial Player Stage -->
-          <div class="commercial-cinema-stage" aria-label="AROMA HOUSE Television Commercial">
-            <div class="cinema-header-bar">
-              <div class="rec-indicator">
-                <span class="rec-dot"></span>
-                <span>REC • 4K 24FPS</span>
-              </div>
-              <div style="color: var(--gold-light); font-weight: 700;">
-                AROMA HOUSE TV SPOT
-              </div>
-              <div style="color: var(--text-muted);">
-                SCENE DIRECT CUT
-              </div>
-            </div>
-
-            <!-- Viewport with Looping Commercial Video & Overlays -->
-            <div class="cinema-viewport">
-              <video class="cinema-video-layer" autoplay loop muted playsinline poster="./assets/story-scene-1-application.jpg">
-                <source src="./assets/hero-fragrance-commercial.mp4" type="video/mp4">
-              </video>
-
-              <!-- Scene 1 Overlay -->
-              <div class="story-slide active" data-scene="0">
-                <span class="slide-story-badge">Scene 01 • The Application</span>
-                <div class="slide-story-title">The Ritual of Sillage</div>
-                <p class="slide-story-caption">Applying concentrated AROMA HOUSE elevation attar to collarbone and pulse points before the evening.</p>
-              </div>
-
-              <!-- Scene 2 Overlay -->
-              <div class="story-slide" data-scene="1">
-                <span class="slide-story-badge">Scene 02 • Macro Close-Up</span>
-                <div class="slide-story-title">100% Pure Extract</div>
-                <p class="slide-story-caption">Close-up on the AROMA HOUSE crystal flacon releasing pure golden fragrance mist.</p>
-              </div>
-
-              <!-- Scene 3 Overlay -->
-              <div class="story-slide" data-scene="2">
-                <span class="slide-story-badge">Scene 03 • The Magnetic Reaction</span>
-                <div class="slide-story-title">Instant Attraction</div>
-                <p class="slide-story-caption">A mesmerizing aura that turns heads across the room, leaving an intoxicating trail.</p>
-              </div>
-
-              <!-- Scene 4 Overlay -->
-              <div class="story-slide" data-scene="3">
-                <span class="slide-story-badge">Scene 04 • The Signature</span>
-                <div class="slide-story-title">Commanding Presence</div>
-                <p class="slide-story-caption">An unforgettable sensory signature. AROMA HOUSE Haute Parfumerie.</p>
-              </div>
-            </div>
-
-            <!-- Commercial Interactive Timeline Tabs -->
-            <div class="cinema-timeline-tabs" role="tablist" aria-label="Commercial Story Scenes">
-              <button type="button" class="timeline-step-btn active" role="tab" aria-selected="true">
-                01 The Ritual
-              </button>
-              <button type="button" class="timeline-step-btn" role="tab" aria-selected="false">
-                02 The Essence
-              </button>
-              <button type="button" class="timeline-step-btn" role="tab" aria-selected="false">
-                03 The Attraction
-              </button>
-              <button type="button" class="timeline-step-btn" role="tab" aria-selected="false">
-                04 The Connection
-              </button>
-            </div>
+        <!-- Floating Interactive Fragrance Switcher Bar -->
+        <div class="hero-bottom-timeline" aria-label="Elevation Series Fragrance Selector">
+          <div class="timeline-info-group">
+            <span class="timeline-info-label">Active Fragrance:</span>
+            <span class="timeline-active-name" id="hero-active-title">White Oud Elevation</span>
+            <span class="timeline-active-price" id="hero-active-price">From PKR 416 (3ml)</span>
+          </div>
+          <div class="slide-nav-pills" role="tablist" aria-label="Select Fragrance Slide">
+            <button type="button" class="slide-pill-trigger active" role="tab" aria-selected="true" data-slide="0" data-name="White Oud Elevation" data-price="From PKR 416 (3ml)">
+              01 White Oud
+            </button>
+            <button type="button" class="slide-pill-trigger" role="tab" aria-selected="false" data-slide="1" data-name="Oud Supreme Elevation" data-price="From PKR 251 (3ml)">
+              02 Oud Supreme
+            </button>
+            <button type="button" class="slide-pill-trigger" role="tab" aria-selected="false" data-slide="2" data-name="Ghilaf-e-Kaba Elevation" data-price="From PKR 335 (3ml)">
+              03 Ghilaf-e-Kaba
+            </button>
+            <button type="button" class="slide-pill-trigger" role="tab" aria-selected="false" data-slide="3" data-name="Oud Ispahan Elevation" data-price="From PKR 504 (3ml)">
+              04 Oud Ispahan
+            </button>
+            <button type="button" class="slide-pill-trigger" role="tab" aria-selected="false" data-slide="4" data-name="Silver Oud Elevation V-2025" data-price="From PKR 281 (3ml)">
+              05 Silver Oud
+            </button>
           </div>
         </div>
       </div>

@@ -12,6 +12,11 @@
   <!-- Accessible Skip Link -->
   <a href="#main-content" class="skip-link">Skip to main content</a>
 
+  <!-- Top Announcement Ticker -->
+  <aside class="announcement-bar" aria-label="Brand Announcement">
+    THE ELEVATION COLLECTION <span>✦</span> 100% PURE CONCENTRATED ATTAR &amp; PARFUM <span>✦</span> OFFICIAL PKR PRICING
+  </aside>
+
   <!-- Global Header -->
   <header class="site-header">
     <div class="container">
@@ -19,14 +24,14 @@
         <a href="./index.html" class="brand-link" aria-label="AROMA HOUSE Home">
           <svg class="brand-emblem-svg" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
             <rect width="64" height="64" rx="12" fill="#080808"/>
-            <rect x="3" y="3" width="58" height="58" rx="9" stroke="#C6A664" stroke-width="1.5" stroke-opacity="0.6"/>
-            <path d="M32 14 C32 14 23 26 23 34 C23 39 27 43 32 43 C37 43 41 39 41 34 C41 26 32 14 32 14 Z" stroke="#C6A664" stroke-width="2" stroke-linejoin="round"/>
-            <path d="M32 24 C32 24 28 30 28 34 C28 36.2 29.8 38 32 38 C34.2 38 36 36.2 36 34 C36 30 32 24 32 24 Z" fill="#C6A664" fill-opacity="0.4"/>
-            <circle cx="32" cy="50" r="2" fill="#C6A664"/>
+            <rect x="3" y="3" width="58" height="58" rx="9" stroke="#C6A664" stroke-width="1.5" stroke-opacity="0.8"/>
+            <path d="M32 14 C32 14 23 26 23 34 C23 39 27 43 32 43 C37 43 41 39 41 34 C41 26 32 14 32 14 Z" stroke="#E2C785" stroke-width="2" stroke-linejoin="round"/>
+            <path d="M32 24 C32 24 28 30 28 34 C28 36.2 29.8 38 32 38 C34.2 38 36 36.2 36 34 C36 30 32 24 32 24 Z" fill="#C6A664" fill-opacity="0.5"/>
+            <circle cx="32" cy="50" r="2.5" fill="#E2C785"/>
           </svg>
           <div class="brand-wordmark">
-            <span>AROMA HOUSE</span>
-            <span class="brand-tagline-micro">HAUTE PARFUMERIE</span>
+            <span class="brand-title-main">AROMA HOUSE</span>
+            <span class="brand-tagline-sub">HAUTE PARFUMERIE</span>
           </div>
         </a>
 
@@ -37,6 +42,7 @@
             <li><a href="./about.html" class="nav-link">About</a></li>
             <li><a href="./contact.html" class="nav-link">Contact</a></li>
           </ul>
+          <a href="./collection.html" class="header-cta-btn">View Catalog</a>
         </nav>
 
         <button type="button" class="mobile-nav-toggle" aria-expanded="false" aria-controls="mobile-nav-menu" aria-label="Toggle navigation menu">
@@ -62,15 +68,17 @@
 
   <!-- Main Content -->
   <main id="main-content">
-    <section class="section error-page-section">
+    <section class="section" style="padding: 120px 0; text-align: center;">
       <div class="container-narrow">
-        <div class="error-code">404</div>
-        <span class="overline">Page Not Found</span>
-        <h1 style="margin-bottom: 20px;">The Requested Page Is Unavailable</h1>
-        <p class="content-paragraph" style="max-width: 520px; margin: 0 auto 36px;">
-          The address you followed may have moved or no longer exists. Explore our fragrance catalog or return to the main entrance.
+        <div style="font-family: var(--font-serif-display); font-size: clamp(5rem, 12vw, 8rem); line-height: 1; color: var(--gold-light); margin-bottom: 12px; font-weight: 700;">
+          404
+        </div>
+        <div class="overline-badge">Archive Notice</div>
+        <h1 style="margin-bottom: 24px; font-size: 2.2rem;">The Requested Composition Is Unavailable</h1>
+        <p style="max-width: 560px; margin: 0 auto 40px; font-size: 1.1rem; color: var(--text-secondary);">
+          The page or formulation reference you followed could not be located. Explore our current Elevation catalog or return to the main gallery.
         </p>
-        <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+        <div style="display: flex; gap: 18px; justify-content: center; flex-wrap: wrap;">
           <a href="./index.html" class="btn btn-primary">Return to Home</a>
           <a href="./collection.html" class="btn btn-outline">Explore Elevation Collection</a>
         </div>
@@ -81,41 +89,47 @@
   <!-- Global Footer -->
   <footer class="site-footer">
     <div class="container">
-      <div class="footer-top">
+      <div class="footer-main-grid">
         <div>
           <div class="brand-wordmark">
-            <span>AROMA HOUSE</span>
-            <span class="brand-tagline-micro">HAUTE PARFUMERIE</span>
+            <span class="brand-title-main">AROMA HOUSE</span>
+            <span class="brand-tagline-sub">HAUTE PARFUMERIE</span>
           </div>
-          <p class="footer-brand-desc">
-            Artisanal fragrance selections presented with disciplined craft and verified pricing across standard 3 ml, 6 ml, and 12 ml editions.
+          <p class="footer-bio-text">
+            Bespoke artisanal perfume elevations presented with disciplined extract formulation, verified PKR pricing, and transparent volume editions.
           </p>
         </div>
 
         <div>
-          <h4 class="footer-heading">Navigation</h4>
-          <ul class="footer-links">
+          <h4 class="footer-col-title">Navigation</h4>
+          <ul class="footer-nav-list">
             <li><a href="./index.html">Home</a></li>
             <li><a href="./collection.html">Collection &amp; Prices</a></li>
-            <li><a href="./about.html">About</a></li>
-            <li><a href="./contact.html">Contact</a></li>
+            <li><a href="./about.html">About Us</a></li>
+            <li><a href="./contact.html">Contact &amp; Inquiries</a></li>
           </ul>
         </div>
 
         <div>
-          <h4 class="footer-heading">Verified Catalog</h4>
-          <p class="footer-note">
-            Authoritative product pricing in Pakistani Rupees (PKR) as codified in the official AROMA HOUSE price list.
+          <h4 class="footer-col-title">Official Inquiries</h4>
+          <p class="footer-contact-item" style="margin-bottom: 12px;">
+            Direct inquiries, catalog questions, and orders:
+          </p>
+          <p class="footer-contact-item">
+            <a href="mailto:info@aromahousepk.com">info@aromahousepk.com</a>
+          </p>
+          <p class="footer-contact-item" style="margin-top: 14px; font-size: 0.82rem; color: var(--text-muted);">
+            Domain: aromahousepk.com
           </p>
         </div>
       </div>
 
-      <div class="footer-bottom">
-        <div class="footer-copyright">
+      <div class="footer-bottom-bar">
+        <div class="footer-copy">
           &copy; AROMA HOUSE. All rights reserved.
         </div>
-        <div class="footer-meta">
-          Elevation Fragrance Collection
+        <div class="footer-badge-note">
+          Authoritative Pakistani Rupee (PKR) Price Schedule
         </div>
       </div>
     </div>

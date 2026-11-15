@@ -48,11 +48,11 @@ function initMobileNav() {
  * Product Size Selector & Price Switcher
  */
 function initSizeSelectors() {
-  const productCards = document.querySelectorAll('.product-card');
+  const cards = document.querySelectorAll('.fragrance-card, .product-card');
 
-  productCards.forEach(card => {
-    const sizeButtons = card.querySelectorAll('.size-btn');
-    const priceDisplay = card.querySelector('.price-display-value');
+  cards.forEach(card => {
+    const sizeButtons = card.querySelectorAll('.size-pill-btn, .size-btn');
+    const priceDisplay = card.querySelector('.price-amount-highlight, .price-display-value');
     const selectedSizeLabel = card.querySelector('.current-size-label');
 
     if (!sizeButtons.length || !priceDisplay) return;

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://aromahousepk.com/sitemap.xml

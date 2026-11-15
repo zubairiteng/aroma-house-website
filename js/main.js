@@ -6,6 +6,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   initMobileNav();
   initSizeSelectors();
+  initCommercialPlayer();
 });
 
 /**
@@ -24,7 +25,6 @@ function initMobileNav() {
     document.body.style.overflow = !isExpanded ? 'hidden' : '';
   });
 
-  // Close menu when a link inside is clicked
   drawer.querySelectorAll('.mobile-nav-link').forEach(link => {
     link.addEventListener('click', () => {
       toggleBtn.setAttribute('aria-expanded', 'false');
@@ -33,7 +33,6 @@ function initMobileNav() {
     });
   });
 
-  // Close on Escape key
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && drawer.classList.contains('open')) {
       toggleBtn.setAttribute('aria-expanded', 'false');
@@ -62,7 +61,6 @@ function initSizeSelectors() {
         const targetSize = btn.getAttribute('data-size');
         const targetPrice = btn.getAttribute('data-price');
 
-        // Update active button state
         sizeButtons.forEach(b => {
           b.classList.remove('active');
           b.setAttribute('aria-pressed', 'false');
@@ -70,7 +68,6 @@ function initSizeSelectors() {
         btn.classList.add('active');
         btn.setAttribute('aria-pressed', 'true');
 
-        // Update price display
         if (targetPrice) {
           priceDisplay.textContent = targetPrice;
         }
@@ -79,6 +76,50 @@ function initSizeSelectors() {
           selectedSizeLabel.textContent = targetSize;
         }
       });
+    });
+  });
+}
+
+/**
+ * TV Commercial Player & Story Timeline Sync
+ */
+function initCommercialPlayer() {
+  const video = document.querySelector('.cinema-video-layer');
+  const tabs = document.querySelectorAll('.timeline-step-btn');
+  const slides = document.querySelectorAll('.story-slide');
+
+  if (!video || !tabs.length) return;
+
+  const sceneDuration = 3.0; // 3 seconds per scene
+
+  // Sync timeline tabs with video playback time
+  video.addEventListener('timeupdate', () => {
+    const activeIdx = Math.min(Math.floor(video.currentTime / sceneDuration), tabs.length - 1);
+    
+    tabs.forEach((tab, idx) => {
+      if (idx === activeIdx) {
+        tab.classList.add('active');
+      } else {
+        tab.classList.remove('active');
+      }
+    });
+
+    if (slides.length) {
+      slides.forEach((slide, idx) => {
+        if (idx === activeIdx) {
+          slide.classList.add('active');
+        } else {
+          slide.classList.remove('active');
+        }
+      });
+    }
+  });
+
+  // Clicking a timeline tab jumps to that scene
+  tabs.forEach((tab, idx) => {
+    tab.addEventListener('click', () => {
+      video.currentTime = idx * sceneDuration;
+      video.play().catch(() => {});
     });
   });
 }
